@@ -3,32 +3,4 @@
 	--font-secondary: "Inter",   sans-serif;
 
 	font-feature-settings: "liga" 1, "calt" 1;
-
-	--type-unit: 1rem; /* 16px */
-
-	--text-xs:   calc(var(--type-unit) * 0.75);  /* 12px */
-	--text-sm:   calc(var(--type-unit) * 0.875); /* 14px */
-	--text-base: calc(var(--type-unit) * 1);     /* 16px */
-	--text-lg:   calc(var(--type-unit) * 1.125); /* 18px */
-	--text-xl:   calc(var(--type-unit) * 1.25);  /* 20px */
-	--text-2xl:  calc(var(--type-unit) * 1.5);   /* 24px */
-	--text-3xl:  calc(var(--type-unit) * 1.875); /* 30px */
-	--text-4xl:  calc(var(--type-unit) * 2.25);  /* 36px */
-	--text-5xl:  calc(var(--type-unit) * 3);     /* 48px */
-	--text-6xl:  calc(var(--type-unit) * 3.75);  /* 60px */
-	--text-7xl:  calc(var(--type-unit) * 4.5);   /* 72px */
-	--text-8xl:  calc(var(--type-unit) * 6);     /* 96px */
-
-	--line-height-xs:   calc(var(--type-unit) * 1);     /* 16px */
-	--line-height-sm:   calc(var(--type-unit) * 1.25);  /* 20px */
-	--line-height-base: calc(var(--type-unit) * 1.5);   /* 24px */
-	--line-height-lg:   calc(var(--type-unit) * 1.75);  /* 28px */
-	--line-height-xl:   calc(var(--type-unit) * 1.75);  /* 28px */
-	--line-height-2xl:  calc(var(--type-unit) * 2);     /* 32px */
-	--line-height-3xl:  calc(var(--type-unit) * 2.25);  /* 36px */
-	--line-height-4xl:  calc(var(--type-unit) * 2.5);   /* 40px */
-	--line-height-5xl:  1;                              /* 48px */
-	--line-height-6xl:  1;                              /* 60px */
-	--line-height-7xl:  1;                              /* 72px */
-	--line-height-8xl:  1;                              /* 96px */
 }

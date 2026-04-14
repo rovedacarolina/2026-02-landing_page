@@ -16,17 +16,17 @@
 
 <style>
 	header {
-		padding-block: var(--space-6);
+		padding-block: var(--size-6);
 
 		display: flex;
-		gap: var(--space-8);
+		gap: var(--size-8);
 		justify-content: space-between;
 		align-items: center;
 	}
 
 	nav {
 		display: flex;
-		gap: var(--space-6);
+		gap: var(--size-6);
 		align-items: center;
 	}
 </style>

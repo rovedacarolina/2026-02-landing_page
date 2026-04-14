@@ -11,8 +11,8 @@ body {
 	text-wrap: pretty;
 
 	font-family: var(--font-primary);
-	font-size: var(--text-2xl);
-	line-height: var(--line-height-2xl);
+	font-size: var(--size-5);
+	line-height: 1.25;
 	font-weight: 500;
 	color: var(--color-ink);
 

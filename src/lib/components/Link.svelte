@@ -38,7 +38,7 @@
 
 		display: inline-flex;
 		align-items: center;
-		gap: var(--space-1);
+		gap: var(--size-1);
 
 		&:hover {
 			color: var(--color-hover);
