@@ -29,3 +29,7 @@ body {
 	color: var(--color-ink-inverted);
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
