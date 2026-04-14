@@ -4,6 +4,7 @@
 	import "$lib/styles/reset.css";
 	import "$lib/styles/tokens.css";
 	import "$lib/styles/base.css";
+	import "$lib/styles/utilities.css";
 
 	import Header from "$lib/components/Header.svelte";
 
