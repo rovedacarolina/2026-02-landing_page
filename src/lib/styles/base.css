@@ -1,3 +1,7 @@
+html {
+	font-size: 100%;
+}
+
 body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -7,8 +11,8 @@ body {
 	text-wrap: pretty;
 
 	font-family: var(--font-primary);
-	font-size: 100%;
-	line-height: 1.5;
+	font-size: var(--text-2xl);
+	line-height: var(--line-height-2xl);
 	color: var(--color-ink);
 
 	background: var(--color-canvas);
