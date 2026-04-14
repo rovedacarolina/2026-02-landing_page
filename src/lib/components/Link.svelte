@@ -28,20 +28,14 @@
 
 <style>
 	a {
-		@media screen and (prefers-color-scheme: light) {
-			--color-hover: var(--hex-brand-600);
-		}
-
-		@media screen and (prefers-color-scheme: dark) {
-			--color-hover: var(--hex-brand-500);
-		}
-
 		display: inline-flex;
 		align-items: center;
 		gap: var(--size-1);
 
+		transition: color 0.75s var(--ease-out-quart);
+
 		&:hover {
-			color: var(--color-hover);
+			color: var(--color-link);
 		}
 	}
 </style>
