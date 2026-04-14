@@ -34,3 +34,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+.safe-area {
+	padding-inline: var(--space-10);
+}
