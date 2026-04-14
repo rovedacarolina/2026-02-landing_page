@@ -5,6 +5,8 @@
 	import "$lib/styles/tokens.css";
 	import "$lib/styles/base.css";
 
+	import Header from "$lib/components/Header.svelte";
+
 	let { children } = $props();
 </script>
 
@@ -19,5 +21,7 @@
 	<link rel="preconnect" href="https://rsms.me/" />
 	<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 </svelte:head>
+
+<Header />
 
 {@render children()}
