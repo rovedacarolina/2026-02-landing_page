@@ -1,15 +1,7 @@
 <script>
-	import Filter from "$lib/components/Filter.svelte";
 	import Project from "$lib/components/Project.svelte";
 
 	const { data } = $props();
-
-	let currentYear = $state(data.years[0].number);
-	let projects = $derived.by(() => {
-		return data.years.find((year) => {
-			return year.number == currentYear;
-		}).projects;
-	});
 </script>
 
 <section class="safe-area hero">
@@ -21,14 +13,8 @@
 	</h1>
 </section>
 
-<nav class="safe-area filters">
-	{#each data.years as year}
-		<Filter bind:group={currentYear} value={year.number} />
-	{/each}
-</nav>
-
 <section class="safe-area projects">
-	{#each projects as project}
+	{#each data.projects as project}
 		<Project data={project.data} />
 	{/each}
 </section>
@@ -93,6 +79,7 @@
 		gap: var(--size-2);
 	}
 
+<<<<<<< HEAD
 	.filters {
 		display: flex;
 		align-items: center;
@@ -102,6 +89,10 @@
 	.project-card:hover .card-arrow {
 		transform: translateY(0);
 	}
+=======
+	.projects {
+		padding-block: var(--size-7);
+>>>>>>> parent of f51b0cc (add filters)
 
 	.card-arrow svg {
 		width: 100%;
