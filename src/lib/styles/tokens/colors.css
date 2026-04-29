@@ -1,26 +1,25 @@
 :root {
 	/* HEX Colors */
-	--hex-brand-50:  #FFF7F1;
-	--hex-brand-100: #FEEADD;
-	--hex-brand-200: #FECFBB;
-	--hex-brand-300: #FCAF99;
-	--hex-brand-400: #F9907F;
-	--hex-brand-500: #F65E56;
-	--hex-brand-600: #D33E43;
-	--hex-brand-700: #B12B3B;
-	--hex-brand-800: #8E1B32;
-	--hex-brand-900: #76102D;
+	--hex-brand-100: #F9FCFB;
+	--hex-brand-200: #F3FAF8;
+	--hex-brand-300: #E8F2F0;
+	--hex-brand-400: #DAE6E4;
+	--hex-brand-500: #C7D6D5;
+	--hex-brand-600: #91B7B8;
+	--hex-brand-700: #64939A;
+	--hex-brand-800: #3F6F7C;
+	--hex-brand-900: #265366;
 
-	--hex-neutral-50:  #FAFAFA;
-	--hex-neutral-100: #EDEEEF;
-	--hex-neutral-200: #D3D5D7;
-	--hex-neutral-300: #B9BDC1;
-	--hex-neutral-400: #999EA5;
-	--hex-neutral-500: #797F88;
-	--hex-neutral-600: #5F646A;
-	--hex-neutral-700: #3E4246;
-	--hex-neutral-800: #181A1B;
-	--hex-neutral-900: #060606;
+	--hex-neutral-50:  #F9FAFA;
+	--hex-neutral-100: #D9DDE1;
+	--hex-neutral-200: #BBC2C9;
+	--hex-neutral-300: #949FAA;
+	--hex-neutral-400: #7D8A98;
+	--hex-neutral-500: #667686;
+	--hex-neutral-600: #576572;
+	--hex-neutral-700: #46515C;
+	--hex-neutral-800: #384149;
+	--hex-neutral-900: #030404;
 
 	/* Named Colors */
 	@media screen and (prefers-color-scheme: light) {
