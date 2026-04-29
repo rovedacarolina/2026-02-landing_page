@@ -1,12 +1,26 @@
+/**
+ * @typedef {Object} ProjectData
+ * @property {string} slug
+ * @property {any} data
+ */
+
+/**
+ * @typedef {Object} YearGroup
+ * @property {number} number
+ * @property {ProjectData[]} projects
+ */
+
 export default class Project {
 	static async all() {
 		const projects = await Promise.all(
 			Object.entries(import.meta.glob("./projects/**/*.md")).map(async ([path, resolver]) => {
-				const { metadata: data } = await resolver()
-				const slug = path.split("/").pop().slice(0, -3)
-				return { slug, data }
+				/** @type {any} */
+				const module = (await resolver?.()) || {};
+				const { metadata: data } = module;
+				const slug = path.split("/").pop()?.slice(0, -3) || "";
+				return { slug, data };
 			})
-		)
+		);
 
 		return projects.sort((a, b) => {
 			const yearA = a.data.year;
@@ -22,16 +36,17 @@ export default class Project {
 			if (titleA > titleB) return 1;
 
 			return 0;
-		})
+		});
 	}
 
 	static async byYear() {
 		const projects = await this.all();
+		/** @type {YearGroup[]} */
 		const result = [];
 
 		for (const project of projects) {
 			const year = project.data.year;
-			let group = result.find(g => g.number === year);
+			let group = result.find((g) => g.number === year);
 			if (!group) {
 				group = { number: year, projects: [] };
 				result.push(group);

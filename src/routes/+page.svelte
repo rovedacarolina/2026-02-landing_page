@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import TopBar from "$lib/components/TopBar.svelte";
 	import HeroSection from "$lib/components/HeroSection.svelte";
 	import FilterNav from "$lib/components/FilterNav.svelte";
@@ -19,7 +19,7 @@
 		}))
 	);
 
-	function handleModelSelect(modelId) {
+	function handleModelSelect(modelId: string) {
 		selectedModel = modelId;
 	}
 </script>

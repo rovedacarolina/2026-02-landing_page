@@ -1,11 +1,28 @@
-<script>
-	let { items = [], onSelect } = $props();
-	let selected = $state(items[0]?.id);
+<script lang="ts">
+	interface FilterItem {
+		id: string;
+		label: string;
+	}
+
+	let { items = [] as FilterItem[], onSelect } = $props<{
+		items?: FilterItem[];
+		onSelect?: (id: string) => void;
+	}>();
+	
+	let selected = $state<string>("");
+
+	$effect(() => {
+		if (selected === "" && items.length > 0) {
+			selected = items[0].id;
+		}
+	});
+
+	let filterItems = $derived.by(() => items);
 </script>
 
 <nav class="filter-nav">
 	<div class="filters">
-		{#each items as item}
+		{#each filterItems as item}
 			<button
 				class="filter-btn"
 				class:active={selected === item.id}
