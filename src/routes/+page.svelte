@@ -13,6 +13,7 @@
 </script>
 
 <section class="safe-area hero">
+	<h1>Ciao mondo</h1>
 	<h1>
 		This archive collects the best outcomes of the Web Design Laboratory in
 		Communication Design, Politecnico di Milano. The laboratory is directed by
