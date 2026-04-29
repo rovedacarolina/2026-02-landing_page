@@ -27,4 +27,4 @@
 	/>
 </svelte:head>
 
-<i class="{pack} ph-{name}"></i>
+<i class="ph ph-corners-out"></i>

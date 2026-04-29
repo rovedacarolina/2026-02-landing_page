@@ -3,7 +3,6 @@
 	import HeroSection from "$lib/components/HeroSection.svelte";
 	import FilterNav from "$lib/components/FilterNav.svelte";
 	import Project from "$lib/components/Project.svelte";
-	import { porscheModels, heroData } from "$lib/data/porsche.js";
 
 	let selectedModel = $state("carrera");
 
@@ -24,33 +23,18 @@
 	}
 </script>
 
-<TopBar />
+<section class="safe-area hero">
+	<h1>
+		This archive collects the best outcomes of the Web Design Laboratory in
+		Communication Design, Politecnico di Milano. The laboratory is directed by
+		Umberto Tolino, Christian Mazzoleni, Francesco di Gioia and Tommaso Negri
+		with love.
+	</h1>
+</section>
 
-<HeroSection {...heroData} />
-
-<FilterNav items={filterItems} onSelect={handleModelSelect} />
-
-<section class="projects-grid">
-	{#each filteredModels as model (model.id)}
-		<article class="project-card">
-			<div class="card-thumbnail">
-				<div class="veil"></div>
-				<img src={model.thumbnail} alt={model.title} />
-			</div>
-
-			<header class="card-header">
-				<div class="card-title">
-					<h3>{model.title}</h3>
-					<span class="year">/ {model.year}</span>
-				</div>
-
-				<div class="card-arrow">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-						<path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-					</svg>
-				</div>
-			</header>
-		</article>
+<section class="safe-area projects">
+	{#each data.projects as project}
+		<Project data={project.data} />
 	{/each}
 </section>
 
@@ -114,27 +98,10 @@
 		gap: var(--size-2);
 	}
 
-	.card-title h3 {
-		font-size: var(--size-5);
-		font-weight: 500;
-		margin: 0;
-		color: var(--color-ink);
-	}
-
-	.year {
-		color: var(--color-ink-secondary);
-		font-size: var(--size-5);
-	}
-
-	.card-arrow {
-		width: var(--size-4);
-		height: var(--size-4);
-		color: var(--color-ink);
+	.filters {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		transition: transform 0.75s var(--ease-out-quart);
-		transform: translateY(100%);
+		gap: var(--size-5);
 	}
 
 	.project-card:hover .card-arrow {
