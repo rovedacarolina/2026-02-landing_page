@@ -6,7 +6,6 @@
 	<Link title="W–D" ref="/" />
 
 	<nav>
-		<Link title="About" ref="/about" />
 		<Link
 			title="@webdesign_ddc"
 			ref="https://www.instagram.com/webdesign_ddc"
