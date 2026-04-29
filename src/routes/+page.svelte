@@ -1,7 +1,26 @@
-<script>
+<script lang="ts">
+	import TopBar from "$lib/components/TopBar.svelte";
+	import HeroSection from "$lib/components/HeroSection.svelte";
+	import FilterNav from "$lib/components/FilterNav.svelte";
 	import Project from "$lib/components/Project.svelte";
 
-	const { data } = $props();
+	let selectedModel = $state("carrera");
+
+	let filteredModels = $derived.by(() => {
+		const model = porscheModels.find((m) => m.id === selectedModel);
+		return model?.models || [];
+	});
+
+	let filterItems = $derived(
+		porscheModels.map((m) => ({
+			id: m.id,
+			label: m.label
+		}))
+	);
+
+	function handleModelSelect(modelId: string) {
+		selectedModel = modelId;
+	}
 </script>
 
 <section class="safe-area hero">
@@ -79,7 +98,6 @@
 		gap: var(--size-2);
 	}
 
-<<<<<<< HEAD
 	.filters {
 		display: flex;
 		align-items: center;
@@ -89,10 +107,6 @@
 	.project-card:hover .card-arrow {
 		transform: translateY(0);
 	}
-=======
-	.projects {
-		padding-block: var(--size-7);
->>>>>>> parent of f51b0cc (add filters)
 
 	.card-arrow svg {
 		width: 100%;

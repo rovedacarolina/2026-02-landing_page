@@ -1,7 +1,14 @@
-<script>
+<script lang="ts">
 	import Icon from "./Icon.svelte";
 
-	const { data: project } = $props();
+	interface ProjectData {
+		title: string;
+		year: string;
+		thumbnail: string;
+		link?: string;
+	}
+
+	const { data: project } = $props<{ data: ProjectData }>();
 </script>
 
 {#if project.link}
@@ -12,22 +19,22 @@
 	{@render card(project)}
 {/if}
 
-{#snippet card(project)}
+{#snippet card(projectData: ProjectData)}
 	<article>
 		<div class="thumbnail">
-			{#if project.link}
+			{#if projectData.link}
 				<div class="veil"></div>
 			{/if}
-			<img src={project.thumbnail} alt={project.title} />
+			<img src={projectData.thumbnail} alt={projectData.title} />
 		</div>
 
 		<header>
 			<hgroup>
-				<h3>{project.title}</h3>
-				<span>/ {project.year}</span>
+				<h3>{projectData.title}</h3>
+				<span>/ {projectData.year}</span>
 			</hgroup>
 
-			{#if project.link}
+			{#if projectData.link}
 				<div class="arrow">
 					<Icon name="arrow-up-right" />
 				</div>
